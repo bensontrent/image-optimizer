@@ -91,7 +91,7 @@ class OptimizerChain
         $optimizer->setImagePath($image->path());
 
         $command = $optimizer->getCommand();
-   
+
         $this->logger->info("Executing `{$command}`");
 
         if ($this->isCli()) {
