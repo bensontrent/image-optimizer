@@ -91,12 +91,12 @@ class OptimizerChain
         $optimizer->setImagePath($image->path());
 
         $command = $optimizer->getCommand();
-   
+
         $this->logger->info("Executing `{$command}`");
 
-        if ($this->is_cli()) {
+        if ($this->isCli()) {
             $process = new Process($command);
-            } else {
+        } else {
             $process = Process::fromShellCommandline($command);
         }
         
